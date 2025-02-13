@@ -75,6 +75,51 @@
   }
 }
 
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 768px) {
+  .lottery-container {
+    padding: 1rem;
+  }
+  
+  .generation-number {
+    font-size: 4rem;
+  }
+  
+  .binary-title {
+    font-size: 3.5rem;
+  }
+  
+  cyber-card {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .generation-number {
+    font-size: 3rem;
+  }
+  
+  .binary-title {
+    font-size: 2.5rem;
+  }
+}
+
 .lottery-wrapper {
   position: relative;
   min-height: 100vh;
@@ -217,7 +262,7 @@
 .generation-number {
   font-size: 5rem;
   font-weight: 900;
-  font-family: "bitro";
+  font-family: "bitmap";
   color: #ffffff;
   text-shadow: 
     0 0 20px rgba(147, 197, 253, 0.5),
@@ -236,7 +281,7 @@
   font-size: 4.5rem;
   font-weight: 900;
   color: #ffffff;
-  font-family: "bitro";
+  font-family: "bitmap";
   text-shadow: 
     0 0 30px rgba(147, 197, 253, 0.5),
     0 0 60px rgba(96, 165, 250, 0.3);
@@ -388,7 +433,7 @@
 
 .binary-name {
   color: #93C5FD;
-  font-family: monospace;
+  font-family: "bitmap";
   font-size: 0.9rem;
   opacity: 0.8;
 }
@@ -413,49 +458,4 @@
     radial-gradient(circle at 10% 10%, rgba(147, 197, 253, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 90% 90%, rgba(147, 197, 253, 0.1) 0%, transparent 50%);
   pointer-events: none;
-}
-
-@keyframes scan {
-  0% { top: 0; }
-  100% { top: 100%; }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(0.98);
-  }
-}
-
-@media (max-width: 768px) {
-  .lottery-container {
-    padding: 1rem;
-  }
-  
-  .generation-number {
-    font-size: 4rem;
-  }
-  
-  .binary-title {
-    font-size: 3.5rem;
-  }
-  
-  cyber-card {
-    padding: 1.5rem;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .generation-number {
-    font-size: 3rem;
-  }
-  
-  .binary-title {
-    font-size: 2.5rem;
-  }
 }

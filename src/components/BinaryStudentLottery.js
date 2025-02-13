@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './BinaryStudentLottery.css';
-import * as XLSX from 'xlsx';
+import * as xlsx from 'xlsx';
 
 const BinaryStudentLottery = () => {
   /* ==================== 상태 관리 ==================== */
@@ -32,11 +32,11 @@ const BinaryStudentLottery = () => {
     const reader = new FileReader();
     reader.onload = (evt) => {
       const bstr = evt.target.result;
-      const wb = XLSX.read(bstr, { type: "binary" });
+      const wb = xlsx.read(bstr, { type: "binary" });
       const wsname = wb.SheetNames[0];
       const ws = wb.Sheets[wsname];
-      const data = XLSX.utils.sheet_to_json(ws);
-      const names = data.map((row) => row.name);
+      const data = xlsx.utils.sheet_to_json(ws);
+      const names = data.map((row) => row.성명);
       setStudents(names);
     };
   
